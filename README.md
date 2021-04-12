@@ -25,7 +25,7 @@ This project devlopment, has been made very easy by the LearnDjango team ( you c
 I have included the Dockerfile and docker-compose.yml in the repo. If you want to know more, about how to set up docker with django, feel free to have a look [here](https://github.com/roldel/Docker-For-Django-Starter-Files). Docker is just an option though, other environment with django3 will work as well
 
 ### Set up the project
-Clone the project locally
+Clone the project locally.
 In the config.settings.py file, update the SECRET_KEY value to your dev or production key.
 You can then perform the initial DB migration. It is required, as we will be using the User built-in model (from django.contrib.auth.models)
 ```{bash}
@@ -37,8 +37,7 @@ Your project is now already good to go, You can start your development server an
 In this project, django will only save the password reset emails, in a "sent_emails" directory, in the project root. It will not send them.
 To make it operational, you will need an SMTP server, from a provider. Gmail can be an easy one to start with.
 
-Then in config.settings.py :
-replace :
+In config.settings.py, replace :
 ```{bash}
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = str(BASE_DIR.joinpath('sent_emails'))
@@ -53,7 +52,7 @@ EMAIL_HOST_USER = ‘your_account@gmail.com’
 EMAIL_HOST_PASSWORD = ‘your account’s password’
 ```
 
-For your gmail SMTP to process the emails, make sure you allow "Less secure apps" in your associated google account settings. Also you might have to clear the security warnings that might arise, as you start to use the service (gmail will send you an email) 
+For your gmail SMTP to process the emails, make sure you allow "Less secure apps" in your associated google account settings. Also you might have to clear the security warnings, that might arise, as you start to use the service (gmail will send you an email) 
 
 
 
