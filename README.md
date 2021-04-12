@@ -33,9 +33,28 @@ python manage.py migrate
 ```
 Your project is now already good to go, You can start your development server and give a try at your auth system.
 
-### Email setup
-In this project, django will only save the password reset email, in a "sent_emails" directory, in the project root. It will not send them.
+### Email setup ✉️
+In this project, django will only save the password reset emails, in a "sent_emails" directory, in the project root. It will not send them.
 To make it operational, you will need an SMTP server, from a provider. Gmail can be an easy one to start with.
+
+Then in config.settings.py :
+replace :
+```{bash}
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = str(BASE_DIR.joinpath('sent_emails'))
+```
+with  :
+```{bash}
+EMAIL_BACKEND = ‘django.core.mail.backends.smtp.EmailBackend’
+EMAIL_HOST = ‘smtp.gmail.com’
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = ‘your_account@gmail.com’
+EMAIL_HOST_PASSWORD = ‘your account’s password’
+```
+
+For your gmail SMTP to process the emails, make sure you allow "Less secure apps" in your associated google account settings. Also you might have to clear the security warnings that might arise, as you start to use the service (gmail will send you an email) 
+
 
 
 
