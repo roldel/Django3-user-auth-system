@@ -1,0 +1,11 @@
+# python related files
+*.pyc
+*.pyo
+__pycache__
+
+# securing keys
+keys.py
+
+# sqlite db
+*.db
+*.sqlite3
