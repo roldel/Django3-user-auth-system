@@ -3,7 +3,7 @@
 ## Implementation of Django 3 built-in user authentification system, including password reset
 
 
-![Alt text](https://raw.githubusercontent.com/roldel/Django3-user-auth-system/main/django-auth.gif "a title")
+![Demonstration gif](https://raw.githubusercontent.com/roldel/Django3-user-auth-system/main/django-auth.gif)
 
 This project devlopment, has been made very easy by the LearnDjango team ( you can see their tutorial [here](https://learndjango.com/tutorials/django-password-reset-tutorial "LearnDjango tutorial") )
 
